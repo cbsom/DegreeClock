@@ -1,0 +1,108 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DegreeClock.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="LocationName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">New York, NY</Value>
+    </Setting>
+    <Setting Name="DayColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">White</Value>
+    </Setting>
+    <Setting Name="NightColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Silver</Value>
+    </Setting>
+    <Setting Name="TimePassedColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Maroon</Value>
+    </Setting>
+    <Setting Name="CurrentTimeLine" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Red</Value>
+    </Setting>
+    <Setting Name="FormBackgroundColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Gainsboro</Value>
+    </Setting>
+    <Setting Name="TimeTextColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Red</Value>
+    </Setting>
+    <Setting Name="TimeTextFont" Type="System.Drawing.Font" Scope="User">
+      <Value Profile="(Default)">Courier New, 10.8pt, style=Bold</Value>
+    </Setting>
+    <Setting Name="DegreeNumbersColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">165, 165, 165</Value>
+    </Setting>
+    <Setting Name="DegreeNumbersFont" Type="System.Drawing.Font" Scope="User">
+      <Value Profile="(Default)">Tahoma, 7pt</Value>
+    </Setting>
+    <Setting Name="DegreeLinesColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">WhiteSmoke</Value>
+    </Setting>
+    <Setting Name="CurrentDegreeNumberColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Red</Value>
+    </Setting>
+    <Setting Name="ClockNumbersFont" Type="System.Drawing.Font" Scope="User">
+      <Value Profile="(Default)">Tahoma, 7pt</Value>
+    </Setting>
+    <Setting Name="ClockNumbersColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">RosyBrown</Value>
+    </Setting>
+    <Setting Name="ClockHoursColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">RosyBrown</Value>
+    </Setting>
+    <Setting Name="ClockHoursFont" Type="System.Drawing.Font" Scope="User">
+      <Value Profile="(Default)">Tahoma, 7pt, style=Bold</Value>
+    </Setting>
+    <Setting Name="NeedsUpgrade" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ShowDay" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ShowNight" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ShowCurrentTimeMinutes" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ShowCurrentTime" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ShowCurrentTimeLine" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ShowCurrentTimeFill" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ShowRegTime" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ShowDegTime" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ShowDegreeNumbers" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ShowWordsDegTime" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ShowWordsRegTime" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="DegTimeLabelNotation" Type="DegreeClock.TimeNotation" Scope="User">
+      <Value Profile="(Default)">DegTimeLong</Value>
+    </Setting>
+    <Setting Name="RegTimeLabelNotation" Type="DegreeClock.TimeNotation" Scope="User">
+      <Value Profile="(Default)">RegTime24Long</Value>
+    </Setting>
+    <Setting Name="TitleBarNotation" Type="DegreeClock.TimeNotation" Scope="User">
+      <Value Profile="(Default)">DegTimeShort</Value>
+    </Setting>
+    <Setting Name="ShowTimeInTitleBar" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ShowDegreeLines" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>    
+    <Setting Name="HideWindowBorder" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
