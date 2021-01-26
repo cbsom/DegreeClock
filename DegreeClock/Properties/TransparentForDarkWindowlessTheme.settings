@@ -1,12 +1,12 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DegreeClock.Properties" GeneratedClassName="DarkWindowlessTheme">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DegreeClock.Properties" GeneratedClassName="TransparentForDarkWindowlessTheme">
   <Profiles />
   <Settings>
     <Setting Name="DayColor" Type="System.Drawing.Color" Scope="Application">
-      <Value Profile="(Default)">Black</Value>
+      <Value Profile="(Default)">Transparent</Value>
     </Setting>
     <Setting Name="NightColor" Type="System.Drawing.Color" Scope="Application">
-      <Value Profile="(Default)">36, 36, 36</Value>
+      <Value Profile="(Default)">36, 36, 36, 75</Value>
     </Setting>
     <Setting Name="TimePassedColor" Type="System.Drawing.Color" Scope="Application">
       <Value Profile="(Default)">193, 193, 255</Value>
@@ -87,7 +87,7 @@
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="TransparentBackground" Type="System.Boolean" Scope="Application">
-      <Value Profile="(Default)">False</Value>
+      <Value Profile="(Default)">True</Value>
     </Setting>
   </Settings>
 </SettingsFile>

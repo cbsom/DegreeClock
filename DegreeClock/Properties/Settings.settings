@@ -100,8 +100,11 @@
     </Setting>
     <Setting Name="ShowDegreeLines" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
-    </Setting>    
+    </Setting>
     <Setting Name="HideWindowBorder" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="TransparentBackground" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
   </Settings>

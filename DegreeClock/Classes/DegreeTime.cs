@@ -19,7 +19,7 @@ namespace DegreeClock
         /// This number is the value of the equation: 360 / 24 / 60 / 60 / 1000 / 10000
         /// </summary>
         private const double DEGS_IN_TICK = 0.0000000004166666666666666667;
-        private double _degrees;
+        private readonly double _degrees;
 
         /// <summary>
         /// Gets the Degrees part of this degtime
@@ -74,19 +74,19 @@ namespace DegreeClock
         {
             if (degrees < 0)
             {
-                throw new ArgumentOutOfRangeException("degrees", degrees, "degrees can not be a negative number.");
+                throw new ArgumentOutOfRangeException(nameof(degrees), degrees, $"{nameof(degrees)} can not be a negative number.");
             }
             if (minutes < 0)
             {
-                throw new ArgumentOutOfRangeException("minutes", minutes, "minutes can not be a negative number.");
+                throw new ArgumentOutOfRangeException(nameof(minutes), minutes, $"{nameof(minutes)} can not be a negative number.");
             }
             if (seconds < 0)
             {
-                throw new ArgumentOutOfRangeException("seconds", seconds, "seconds can not be a negative number.");
+                throw new ArgumentOutOfRangeException(nameof(seconds), seconds, $"{nameof(seconds)} can not be a negative number.");
             }
             if (thirds < 0)
             {
-                throw new ArgumentOutOfRangeException("thirds", thirds, "thirds can not be a negative number.");
+                throw new ArgumentOutOfRangeException(nameof(thirds), thirds, $"{nameof(thirds)} can not be a negative number.");
             }
             
             this._degrees = (double)(degrees + 
@@ -101,7 +101,7 @@ namespace DegreeClock
         {
             if(degrees < 0)
             {
-                throw new ArgumentOutOfRangeException("degrees", degrees, "degrees can not be a negative number.");
+                throw new ArgumentOutOfRangeException(nameof(degrees), degrees, "degrees can not be a negative number.");
             }
 
             this._degrees = degrees;

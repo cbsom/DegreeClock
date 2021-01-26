@@ -84,6 +84,15 @@ namespace DegreeClock
             base.OnMouseLeave(e);
         }
 
+        protected override void OnPaintBackground(PaintEventArgs e)
+        {
+            bool isTransparent = Properties.Settings.Default.TransparentBackground;
+            if (!isTransparent)
+            {
+                base.OnPaintBackground(e);
+            }
+        }
+
         #endregion
 
         #region Constructors
@@ -92,17 +101,24 @@ namespace DegreeClock
             InitializeComponent();
 
             var wa = Screen.FromControl(this).WorkingArea;
+            if (Properties.Settings.Default.TransparentBackground)
+            {
+                this.Location = new Point(wa.Width - this.Width, (wa.Height / 2) - (this.Height / 2));
+            }
+            else
+            {
+                //Fill the height of the working area
+                this.Height = wa.Height;
 
-            //Fill the height of the working area
-            this.Height = wa.Height;
+                //After resize, make sure the panel is square
+                var max = Math.Max(this.pnlClockDisplay.Width, this.pnlClockDisplay.Height);
 
-            //After resize, make sure the panel is square
-            var max = Math.Max(this.pnlClockDisplay.Width, this.pnlClockDisplay.Height);
+                this.Width = max + (this.Width - this.pnlClockDisplay.Width);
+                this.Height = max + (this.Height - this.pnlClockDisplay.Height);
 
-            this.Width = max + (this.Width - this.pnlClockDisplay.Width);
-            this.Height = max + (this.Height - this.pnlClockDisplay.Height);
+                this.Location = new Point((wa.Width / 2) - (this.Width / 2), wa.Top);
+            }
 
-            this.Location = new Point((wa.Width / 2) - (this.Width / 2), wa.Top);
             this.GetFromSettings();
 
         }
@@ -129,8 +145,11 @@ namespace DegreeClock
                 Task.Factory.StartNew(() =>
                 {
                     Thread.Sleep(5000);
-                    this.Invoke(new Action(() =>  
-                        this.pbClose.Visible = this.pictureBox1.Visible = false));
+                    this.Invoke(new Action(() =>
+                    {
+                        this.pbClose.Visible = false;
+                        this.pictureBox1.Visible = false;
+                    }));
                 });
             }
         }
@@ -164,16 +183,21 @@ namespace DegreeClock
         private void pnlClockDisplay_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
-            Process.GetCurrentProcess().ProcessorAffinity = (IntPtr)1;
-            g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            //Process.GetCurrentProcess().ProcessorAffinity = (IntPtr)1;
+            if (g.SmoothingMode != System.Drawing.Drawing2D.SmoothingMode.HighQuality)
+            {
+                g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            }
             this.DrawClockFace(g, this._currDegTime.Degrees);
             this._needsRefresh = false;
         }
 
         private void chooseLocationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var f = new frmSettings();
-            f.Owner = this;
+            var f = new frmSettings
+            {
+                Owner = this
+            };
             if (f.ShowDialog() == DialogResult.OK)
             {
                 this.GetFromSettings();
@@ -184,7 +208,6 @@ namespace DegreeClock
         {
             this.pictureBox1.Visible = true;
             this.pbClose.Visible = Properties.Settings.Default.HideWindowBorder;
-
         }
         private void pbClose_Click(object sender, EventArgs e)
         {
@@ -232,6 +255,11 @@ namespace DegreeClock
             this.FormBorderStyle = Properties.Settings.Default.HideWindowBorder ?
                     FormBorderStyle.None : FormBorderStyle.Sizable;
             this.ShowInTaskbar = !Properties.Settings.Default.HideWindowBorder;
+            if (Properties.Settings.Default.TransparentBackground)
+            {
+                this.AllowTransparency = true;
+                this.TransparencyKey = Properties.Settings.Default.FormBackgroundColor;
+            }
         }
         #endregion
 

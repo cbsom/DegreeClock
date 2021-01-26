@@ -13,11 +13,11 @@ namespace DegreeClock.Properties {
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.8.1.0")]
-    internal sealed partial class LightWindowless : global::System.Configuration.ApplicationSettingsBase {
+    internal sealed partial class TransparentForDarkWindowlessTheme : global::System.Configuration.ApplicationSettingsBase {
         
-        private static LightWindowless defaultInstance = ((LightWindowless)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new LightWindowless())));
+        private static TransparentForDarkWindowlessTheme defaultInstance = ((TransparentForDarkWindowlessTheme)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new TransparentForDarkWindowlessTheme())));
         
-        public static LightWindowless Default {
+        public static TransparentForDarkWindowlessTheme Default {
             get {
                 return defaultInstance;
             }
@@ -25,7 +25,7 @@ namespace DegreeClock.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("White")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Transparent")]
         public global::System.Drawing.Color DayColor {
             get {
                 return ((global::System.Drawing.Color)(this["DayColor"]));
@@ -34,7 +34,7 @@ namespace DegreeClock.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("240, 240, 250")]
+        [global::System.Configuration.DefaultSettingValueAttribute("36, 36, 36, 75")]
         public global::System.Drawing.Color NightColor {
             get {
                 return ((global::System.Drawing.Color)(this["NightColor"]));
@@ -52,7 +52,7 @@ namespace DegreeClock.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Red")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Maroon")]
         public global::System.Drawing.Color CurrentTimeLine {
             get {
                 return ((global::System.Drawing.Color)(this["CurrentTimeLine"]));
@@ -61,7 +61,7 @@ namespace DegreeClock.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("White")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Black")]
         public global::System.Drawing.Color FormBackgroundColor {
             get {
                 return ((global::System.Drawing.Color)(this["FormBackgroundColor"]));
@@ -160,7 +160,7 @@ namespace DegreeClock.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool ShowCurrentTimeFill {
             get {
                 return ((bool)(this["ShowCurrentTimeFill"]));
@@ -277,7 +277,7 @@ namespace DegreeClock.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool TransparentBackground {
             get {
                 return ((bool)(this["TransparentBackground"]));

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.Linq;
 
 namespace DegreeClock
 {
@@ -293,6 +292,39 @@ namespace DegreeClock
                     Properties.Settings.Default.ShowTimeInTitleBar = Properties.DarkWindowlessTheme.Default.ShowTimeInTitleBar;
                     Properties.Settings.Default.ShowDegreeLines = Properties.DarkWindowlessTheme.Default.ShowDegreeLines;
                     Properties.Settings.Default.HideWindowBorder = Properties.DarkWindowlessTheme.Default.HideWindowBorder;
+                    Properties.Settings.Default.TransparentBackground= Properties.DarkWindowlessTheme.Default.TransparentBackground;
+                    Properties.Settings.Default.Save();
+                    this.ReloadSettings();
+                    break;
+                case "Transparent Dark Windowless":
+                    Properties.Settings.Default.DayColor = Properties.TransparentForDarkWindowlessTheme.Default.DayColor;
+                    Properties.Settings.Default.NightColor = Properties.TransparentForDarkWindowlessTheme.Default.NightColor;
+                    Properties.Settings.Default.TimePassedColor = Properties.TransparentForDarkWindowlessTheme.Default.TimePassedColor;
+                    Properties.Settings.Default.CurrentTimeLine = Properties.TransparentForDarkWindowlessTheme.Default.CurrentTimeLine;
+                    Properties.Settings.Default.FormBackgroundColor = Properties.TransparentForDarkWindowlessTheme.Default.FormBackgroundColor;
+                    Properties.Settings.Default.TimeTextColor = Properties.TransparentForDarkWindowlessTheme.Default.TimeTextColor;
+                    Properties.Settings.Default.TimeTextFont = Properties.TransparentForDarkWindowlessTheme.Default.TimeTextFont;
+                    Properties.Settings.Default.DegreeNumbersColor = Properties.TransparentForDarkWindowlessTheme.Default.DegreeNumbersColor;
+                    Properties.Settings.Default.DegreeNumbersFont = Properties.TransparentForDarkWindowlessTheme.Default.DegreeNumbersFont;
+                    Properties.Settings.Default.DegreeLinesColor = Properties.TransparentForDarkWindowlessTheme.Default.DegreeLinesColor;
+                    Properties.Settings.Default.CurrentDegreeNumberColor = Properties.TransparentForDarkWindowlessTheme.Default.CurrentDegreeNumberColor;
+                    Properties.Settings.Default.ClockNumbersFont = Properties.TransparentForDarkWindowlessTheme.Default.ClockNumbersFont;
+                    Properties.Settings.Default.ClockNumbersColor = Properties.TransparentForDarkWindowlessTheme.Default.ClockNumbersColor;
+                    Properties.Settings.Default.ClockHoursColor = Properties.TransparentForDarkWindowlessTheme.Default.ClockHoursColor;
+                    Properties.Settings.Default.ClockHoursFont = Properties.TransparentForDarkWindowlessTheme.Default.ClockHoursFont;
+                    Properties.Settings.Default.ShowCurrentTimeFill = Properties.TransparentForDarkWindowlessTheme.Default.ShowCurrentTimeFill;
+                    Properties.Settings.Default.ShowRegTime = Properties.TransparentForDarkWindowlessTheme.Default.ShowRegTime;
+                    Properties.Settings.Default.ShowDegTime = Properties.TransparentForDarkWindowlessTheme.Default.ShowDegTime;
+                    Properties.Settings.Default.ShowDegreeNumbers = Properties.TransparentForDarkWindowlessTheme.Default.ShowDegreeNumbers;
+                    Properties.Settings.Default.ShowWordsDegTime = Properties.TransparentForDarkWindowlessTheme.Default.ShowWordsDegTime;
+                    Properties.Settings.Default.ShowWordsRegTime = Properties.TransparentForDarkWindowlessTheme.Default.ShowWordsRegTime;
+                    Properties.Settings.Default.DegTimeLabelNotation = Properties.TransparentForDarkWindowlessTheme.Default.DegTimeLabelNotation;
+                    Properties.Settings.Default.RegTimeLabelNotation = Properties.TransparentForDarkWindowlessTheme.Default.RegTimeLabelNotation;
+                    Properties.Settings.Default.TitleBarNotation = Properties.TransparentForDarkWindowlessTheme.Default.TitleBarNotation;
+                    Properties.Settings.Default.ShowTimeInTitleBar = Properties.TransparentForDarkWindowlessTheme.Default.ShowTimeInTitleBar;
+                    Properties.Settings.Default.ShowDegreeLines = Properties.TransparentForDarkWindowlessTheme.Default.ShowDegreeLines;
+                    Properties.Settings.Default.HideWindowBorder = Properties.TransparentForDarkWindowlessTheme.Default.HideWindowBorder;
+                    Properties.Settings.Default.TransparentBackground = Properties.TransparentForDarkWindowlessTheme.Default.TransparentBackground;
                     Properties.Settings.Default.Save();
                     this.ReloadSettings();
                     break;
@@ -324,6 +356,7 @@ namespace DegreeClock
                     Properties.Settings.Default.ShowTimeInTitleBar = Properties.LightWindowless.Default.ShowTimeInTitleBar;
                     Properties.Settings.Default.ShowDegreeLines = Properties.LightWindowless.Default.ShowDegreeLines;
                     Properties.Settings.Default.HideWindowBorder = Properties.LightWindowless.Default.HideWindowBorder;
+                    Properties.Settings.Default.TransparentBackground = Properties.LightWindowless.Default.TransparentBackground;
                     Properties.Settings.Default.Save();
                     this.ReloadSettings();
                     break;

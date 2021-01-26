@@ -78,9 +78,10 @@
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(727, 642);
+            this.btnCancel.Location = new System.Drawing.Point(545, 522);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(82, 28);
+            this.btnCancel.Size = new System.Drawing.Size(62, 23);
             this.btnCancel.TabIndex = 1;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -89,9 +90,10 @@
             // btnOK
             // 
             this.btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnOK.Location = new System.Drawing.Point(815, 642);
+            this.btnOK.Location = new System.Drawing.Point(611, 522);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(82, 28);
+            this.btnOK.Size = new System.Drawing.Size(62, 23);
             this.btnOK.TabIndex = 2;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
@@ -100,9 +102,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(55, 23);
+            this.label1.Location = new System.Drawing.Point(41, 19);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(378, 34);
+            this.label1.Size = new System.Drawing.Size(281, 26);
             this.label1.TabIndex = 3;
             this.label1.Text = "Choose the location closest to you. \r\nNeeded to determine the correct sunrise and" +
     " sunset times.";
@@ -118,9 +121,10 @@
             // button12
             // 
             this.button12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button12.Location = new System.Drawing.Point(12, 642);
+            this.button12.Location = new System.Drawing.Point(9, 522);
+            this.button12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(164, 28);
+            this.button12.Size = new System.Drawing.Size(123, 23);
             this.button12.TabIndex = 16;
             this.button12.Text = "Reset to Defaults";
             this.button12.UseVisualStyleBackColor = true;
@@ -129,9 +133,10 @@
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(693, 386);
+            this.checkBox4.Location = new System.Drawing.Point(520, 314);
+            this.checkBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(98, 21);
+            this.checkBox4.Size = new System.Drawing.Size(80, 17);
             this.checkBox4.TabIndex = 24;
             this.checkBox4.Text = "checkBox4";
             this.checkBox4.UseVisualStyleBackColor = true;
@@ -147,26 +152,29 @@
             "DegTime - Degree Notation (128° 5′ 44″)",
             "DegTime - Short Degree Notation (128° 5′)",
             "None"});
-            this.cmbDegTimeLabelFormat.Location = new System.Drawing.Point(96, 497);
+            this.cmbDegTimeLabelFormat.Location = new System.Drawing.Point(72, 404);
+            this.cmbDegTimeLabelFormat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbDegTimeLabelFormat.Name = "cmbDegTimeLabelFormat";
-            this.cmbDegTimeLabelFormat.Size = new System.Drawing.Size(318, 24);
+            this.cmbDegTimeLabelFormat.Size = new System.Drawing.Size(240, 21);
             this.cmbDegTimeLabelFormat.TabIndex = 33;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(93, 477);
+            this.label2.Location = new System.Drawing.Point(70, 388);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(147, 17);
+            this.label2.Size = new System.Drawing.Size(110, 13);
             this.label2.TabIndex = 34;
             this.label2.Text = "DegTime label format:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(495, 571);
+            this.label3.Location = new System.Drawing.Point(371, 464);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 17);
+            this.label3.Size = new System.Drawing.Size(80, 13);
             this.label3.TabIndex = 36;
             this.label3.Text = "Title bar format:";
             // 
@@ -184,17 +192,19 @@
             "RegTime - Long 24 Hour (00:51:32)",
             "RegTime - Short 24 Hour (00:51)",
             "None"});
-            this.cmbTitleBarFormat.Location = new System.Drawing.Point(498, 591);
+            this.cmbTitleBarFormat.Location = new System.Drawing.Point(374, 480);
+            this.cmbTitleBarFormat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbTitleBarFormat.Name = "cmbTitleBarFormat";
-            this.cmbTitleBarFormat.Size = new System.Drawing.Size(318, 24);
+            this.cmbTitleBarFormat.Size = new System.Drawing.Size(240, 21);
             this.cmbTitleBarFormat.TabIndex = 35;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(495, 477);
+            this.label4.Location = new System.Drawing.Point(371, 388);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(147, 17);
+            this.label4.Size = new System.Drawing.Size(110, 13);
             this.label4.TabIndex = 38;
             this.label4.Text = "RegTime label format:";
             // 
@@ -209,9 +219,10 @@
             "RegTime - Long 24 Hour (00:51:32)",
             "RegTime - Short 24 Hour (00:51)",
             "None"});
-            this.cmbRegTimeLabelFormat.Location = new System.Drawing.Point(498, 497);
+            this.cmbRegTimeLabelFormat.Location = new System.Drawing.Point(374, 404);
+            this.cmbRegTimeLabelFormat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbRegTimeLabelFormat.Name = "cmbRegTimeLabelFormat";
-            this.cmbRegTimeLabelFormat.Size = new System.Drawing.Size(318, 24);
+            this.cmbRegTimeLabelFormat.Size = new System.Drawing.Size(240, 21);
             this.cmbRegTimeLabelFormat.TabIndex = 37;
             // 
             // checkBox10
@@ -219,9 +230,10 @@
             this.checkBox10.AutoSize = true;
             this.checkBox10.Checked = global::DegreeClock.Properties.Settings.Default.HideWindowBorder;
             this.checkBox10.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::DegreeClock.Properties.Settings.Default, "HideWindowBorder", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox10.Location = new System.Drawing.Point(96, 579);
+            this.checkBox10.Location = new System.Drawing.Point(72, 470);
+            this.checkBox10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(158, 21);
+            this.checkBox10.Size = new System.Drawing.Size(123, 17);
             this.checkBox10.TabIndex = 40;
             this.checkBox10.Text = "Hide Window border";
             this.checkBox10.UseVisualStyleBackColor = true;
@@ -233,9 +245,10 @@
             this.checkBox9.Checked = global::DegreeClock.Properties.Settings.Default.ShowDegreeLines;
             this.checkBox9.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox9.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::DegreeClock.Properties.Settings.Default, "ShowDegreeLines", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox9.Location = new System.Drawing.Point(469, 440);
+            this.checkBox9.Location = new System.Drawing.Point(352, 358);
+            this.checkBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(279, 21);
+            this.checkBox9.Size = new System.Drawing.Size(214, 17);
             this.checkBox9.TabIndex = 39;
             this.checkBox9.Text = "Show the degree lines around the clock";
             this.checkBox9.UseVisualStyleBackColor = true;
@@ -247,9 +260,10 @@
             this.checkBox11.Checked = global::DegreeClock.Properties.Settings.Default.ShowWordsRegTime;
             this.checkBox11.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox11.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::DegreeClock.Properties.Settings.Default, "ShowWordsRegTime", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox11.Location = new System.Drawing.Point(498, 534);
+            this.checkBox11.Location = new System.Drawing.Point(374, 434);
+            this.checkBox11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(291, 21);
+            this.checkBox11.Size = new System.Drawing.Size(226, 17);
             this.checkBox11.TabIndex = 32;
             this.checkBox11.Text = "Show words \"RegTime\" on RegTime label";
             this.checkBox11.UseVisualStyleBackColor = true;
@@ -261,9 +275,10 @@
             this.checkBox12.Checked = global::DegreeClock.Properties.Settings.Default.ShowWordsDegTime;
             this.checkBox12.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox12.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::DegreeClock.Properties.Settings.Default, "ShowWordsDegTime", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox12.Location = new System.Drawing.Point(96, 534);
+            this.checkBox12.Location = new System.Drawing.Point(72, 434);
+            this.checkBox12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(295, 21);
+            this.checkBox12.Size = new System.Drawing.Size(229, 17);
             this.checkBox12.TabIndex = 31;
             this.checkBox12.Text = "Show  words \"DegTime\" on DegTime label";
             this.checkBox12.UseVisualStyleBackColor = true;
@@ -275,9 +290,10 @@
             this.checkBox8.Checked = global::DegreeClock.Properties.Settings.Default.ShowDegreeNumbers;
             this.checkBox8.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox8.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::DegreeClock.Properties.Settings.Default, "ShowDegreeNumbers", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox8.Location = new System.Drawing.Point(160, 440);
+            this.checkBox8.Location = new System.Drawing.Point(120, 358);
+            this.checkBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(305, 21);
+            this.checkBox8.Size = new System.Drawing.Size(233, 17);
             this.checkBox8.TabIndex = 28;
             this.checkBox8.Text = "Show the degree numbers around the clock";
             this.checkBox8.UseVisualStyleBackColor = true;
@@ -289,9 +305,10 @@
             this.checkBox7.Checked = global::DegreeClock.Properties.Settings.Default.ShowCurrentTimeMinutes;
             this.checkBox7.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox7.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::DegreeClock.Properties.Settings.Default, "ShowCurrentTimeMinutes", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox7.Location = new System.Drawing.Point(239, 413);
+            this.checkBox7.Location = new System.Drawing.Point(179, 336);
+            this.checkBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(305, 21);
+            this.checkBox7.Size = new System.Drawing.Size(232, 17);
             this.checkBox7.TabIndex = 27;
             this.checkBox7.Text = "Show regular time minutes around the clock";
             this.checkBox7.UseVisualStyleBackColor = true;
@@ -303,9 +320,10 @@
             this.checkBox6.Checked = global::DegreeClock.Properties.Settings.Default.ShowCurrentTimeLine;
             this.checkBox6.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox6.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::DegreeClock.Properties.Settings.Default, "ShowCurrentTimeLine", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox6.Location = new System.Drawing.Point(558, 386);
+            this.checkBox6.Location = new System.Drawing.Point(418, 314);
+            this.checkBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(246, 21);
+            this.checkBox6.Size = new System.Drawing.Size(189, 17);
             this.checkBox6.TabIndex = 26;
             this.checkBox6.Text = "Show line on clock for current time";
             this.checkBox6.UseVisualStyleBackColor = true;
@@ -317,9 +335,10 @@
             this.checkBox5.Checked = global::DegreeClock.Properties.Settings.Default.ShowCurrentTimeFill;
             this.checkBox5.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox5.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::DegreeClock.Properties.Settings.Default, "ShowCurrentTimeFill", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox5.Location = new System.Drawing.Point(558, 413);
+            this.checkBox5.Location = new System.Drawing.Point(418, 336);
+            this.checkBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(323, 21);
+            this.checkBox5.Size = new System.Drawing.Size(245, 17);
             this.checkBox5.TabIndex = 25;
             this.checkBox5.Text = "Lightly shade the area on clock of time passed";
             this.checkBox5.UseVisualStyleBackColor = true;
@@ -331,9 +350,10 @@
             this.checkBox3.Checked = global::DegreeClock.Properties.Settings.Default.ShowNight;
             this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox3.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::DegreeClock.Properties.Settings.Default, "ShowNight", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox3.Location = new System.Drawing.Point(59, 413);
+            this.checkBox3.Location = new System.Drawing.Point(44, 336);
+            this.checkBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(175, 21);
+            this.checkBox3.Size = new System.Drawing.Size(135, 17);
             this.checkBox3.TabIndex = 23;
             this.checkBox3.Text = "Show nightime shading";
             this.checkBox3.UseVisualStyleBackColor = true;
@@ -345,9 +365,10 @@
             this.checkBox2.Checked = global::DegreeClock.Properties.Settings.Default.ShowCurrentTime;
             this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox2.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::DegreeClock.Properties.Settings.Default, "ShowCurrentTime", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox2.Location = new System.Drawing.Point(239, 386);
+            this.checkBox2.Location = new System.Drawing.Point(179, 314);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(311, 21);
+            this.checkBox2.Size = new System.Drawing.Size(236, 17);
             this.checkBox2.TabIndex = 22;
             this.checkBox2.Text = "Show regular time numbers around the clock";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -359,9 +380,10 @@
             this.checkBox1.Checked = global::DegreeClock.Properties.Settings.Default.ShowDay;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox1.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::DegreeClock.Properties.Settings.Default, "ShowDay", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox1.Location = new System.Drawing.Point(59, 386);
+            this.checkBox1.Location = new System.Drawing.Point(44, 314);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(171, 21);
+            this.checkBox1.Size = new System.Drawing.Size(132, 17);
             this.checkBox1.TabIndex = 21;
             this.checkBox1.Text = "Show daytime shading";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -377,9 +399,10 @@
             this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button16.Font = global::DegreeClock.Properties.Settings.Default.ClockHoursFont;
             this.button16.ForeColor = global::DegreeClock.Properties.Settings.Default.ClockHoursColor;
-            this.button16.Location = new System.Drawing.Point(59, 280);
+            this.button16.Location = new System.Drawing.Point(44, 228);
+            this.button16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(264, 39);
+            this.button16.Size = new System.Drawing.Size(198, 32);
             this.button16.TabIndex = 20;
             this.button16.Text = "Clock Hours Font";
             this.button16.UseVisualStyleBackColor = false;
@@ -396,9 +419,10 @@
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button15.Font = global::DegreeClock.Properties.Settings.Default.ClockNumbersFont;
             this.button15.ForeColor = global::DegreeClock.Properties.Settings.Default.ClockNumbersColor;
-            this.button15.Location = new System.Drawing.Point(589, 280);
+            this.button15.Location = new System.Drawing.Point(442, 228);
+            this.button15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(264, 39);
+            this.button15.Size = new System.Drawing.Size(198, 32);
             this.button15.TabIndex = 19;
             this.button15.Text = "Clock Numbers Font";
             this.button15.UseVisualStyleBackColor = false;
@@ -415,9 +439,10 @@
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button14.Font = global::DegreeClock.Properties.Settings.Default.ClockHoursFont;
             this.button14.ForeColor = global::DegreeClock.Properties.Settings.Default.ClockHoursColor;
-            this.button14.Location = new System.Drawing.Point(440, 223);
+            this.button14.Location = new System.Drawing.Point(330, 181);
+            this.button14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(264, 39);
+            this.button14.Size = new System.Drawing.Size(198, 32);
             this.button14.TabIndex = 18;
             this.button14.Text = "Clock Hours  Color";
             this.button14.UseVisualStyleBackColor = false;
@@ -433,9 +458,10 @@
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button13.Font = global::DegreeClock.Properties.Settings.Default.ClockNumbersFont;
             this.button13.ForeColor = global::DegreeClock.Properties.Settings.Default.ClockNumbersColor;
-            this.button13.Location = new System.Drawing.Point(174, 223);
+            this.button13.Location = new System.Drawing.Point(130, 181);
+            this.button13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(264, 39);
+            this.button13.Size = new System.Drawing.Size(198, 32);
             this.button13.TabIndex = 17;
             this.button13.Text = "Clock Numbers  Color";
             this.button13.UseVisualStyleBackColor = false;
@@ -451,9 +477,10 @@
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Font = global::DegreeClock.Properties.Settings.Default.DegreeNumbersFont;
             this.button11.ForeColor = global::DegreeClock.Properties.Settings.Default.DegreeNumbersColor;
-            this.button11.Location = new System.Drawing.Point(324, 280);
+            this.button11.Location = new System.Drawing.Point(243, 228);
+            this.button11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(264, 39);
+            this.button11.Size = new System.Drawing.Size(198, 32);
             this.button11.TabIndex = 14;
             this.button11.Text = "Degree Numbers Font";
             this.button11.UseVisualStyleBackColor = false;
@@ -470,9 +497,10 @@
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = global::DegreeClock.Properties.Settings.Default.TimeTextFont;
             this.button10.ForeColor = global::DegreeClock.Properties.Settings.Default.TimeTextColor;
-            this.button10.Location = new System.Drawing.Point(324, 321);
+            this.button10.Location = new System.Drawing.Point(243, 261);
+            this.button10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(264, 39);
+            this.button10.Size = new System.Drawing.Size(198, 32);
             this.button10.TabIndex = 13;
             this.button10.Text = "Current Time Font";
             this.button10.UseVisualStyleBackColor = false;
@@ -489,9 +517,10 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = global::DegreeClock.Properties.Settings.Default.DegreeNumbersFont;
             this.button9.ForeColor = global::DegreeClock.Properties.Settings.Default.CurrentDegreeNumberColor;
-            this.button9.Location = new System.Drawing.Point(324, 139);
+            this.button9.Location = new System.Drawing.Point(243, 113);
+            this.button9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(264, 39);
+            this.button9.Size = new System.Drawing.Size(198, 32);
             this.button9.TabIndex = 12;
             this.button9.Text = "Current Degree Color";
             this.button9.UseVisualStyleBackColor = false;
@@ -505,9 +534,10 @@
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.ForeColor = global::DegreeClock.Properties.Settings.Default.DegreeLinesColor;
-            this.button8.Location = new System.Drawing.Point(324, 181);
+            this.button8.Location = new System.Drawing.Point(243, 147);
+            this.button8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(264, 39);
+            this.button8.Size = new System.Drawing.Size(198, 32);
             this.button8.TabIndex = 11;
             this.button8.Text = "Degree Lines Color";
             this.button8.UseVisualStyleBackColor = false;
@@ -523,9 +553,10 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = global::DegreeClock.Properties.Settings.Default.DegreeNumbersFont;
             this.button7.ForeColor = global::DegreeClock.Properties.Settings.Default.DegreeNumbersColor;
-            this.button7.Location = new System.Drawing.Point(57, 181);
+            this.button7.Location = new System.Drawing.Point(43, 147);
+            this.button7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(264, 39);
+            this.button7.Size = new System.Drawing.Size(198, 32);
             this.button7.TabIndex = 10;
             this.button7.Text = "Degree Numbers  Color";
             this.button7.UseVisualStyleBackColor = false;
@@ -541,9 +572,10 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = global::DegreeClock.Properties.Settings.Default.TimeTextFont;
             this.button6.ForeColor = global::DegreeClock.Properties.Settings.Default.TimeTextColor;
-            this.button6.Location = new System.Drawing.Point(591, 139);
+            this.button6.Location = new System.Drawing.Point(443, 113);
+            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(264, 39);
+            this.button6.Size = new System.Drawing.Size(198, 32);
             this.button6.TabIndex = 9;
             this.button6.Text = "Current Time Color";
             this.button6.UseVisualStyleBackColor = false;
@@ -555,9 +587,10 @@
             this.button5.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DegreeClock.Properties.Settings.Default, "FormBackgroundColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(57, 97);
+            this.button5.Location = new System.Drawing.Point(43, 79);
+            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(264, 39);
+            this.button5.Size = new System.Drawing.Size(198, 32);
             this.button5.TabIndex = 8;
             this.button5.Text = "Background Color";
             this.button5.UseVisualStyleBackColor = false;
@@ -571,9 +604,10 @@
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = global::DegreeClock.Properties.Settings.Default.CurrentTimeLine;
-            this.button4.Location = new System.Drawing.Point(57, 139);
+            this.button4.Location = new System.Drawing.Point(43, 113);
+            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(264, 39);
+            this.button4.Size = new System.Drawing.Size(198, 32);
             this.button4.TabIndex = 7;
             this.button4.Text = "Current Time Line";
             this.button4.UseVisualStyleBackColor = false;
@@ -587,9 +621,10 @@
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = global::DegreeClock.Properties.Settings.Default.DegreeLinesColor;
-            this.button3.Location = new System.Drawing.Point(591, 181);
+            this.button3.Location = new System.Drawing.Point(443, 147);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(264, 39);
+            this.button3.Size = new System.Drawing.Size(198, 32);
             this.button3.TabIndex = 6;
             this.button3.Text = "Time Passed  Color";
             this.button3.UseVisualStyleBackColor = false;
@@ -603,9 +638,10 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = global::DegreeClock.Properties.Settings.Default.DegreeLinesColor;
-            this.button2.Location = new System.Drawing.Point(591, 97);
+            this.button2.Location = new System.Drawing.Point(443, 79);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(264, 39);
+            this.button2.Size = new System.Drawing.Size(198, 32);
             this.button2.TabIndex = 5;
             this.button2.Text = "Night Color";
             this.button2.UseVisualStyleBackColor = false;
@@ -617,9 +653,10 @@
             this.button1.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DegreeClock.Properties.Settings.Default, "DayColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(324, 97);
+            this.button1.Location = new System.Drawing.Point(243, 79);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(264, 39);
+            this.button1.Size = new System.Drawing.Size(198, 32);
             this.button1.TabIndex = 4;
             this.button1.Text = "Day Color";
             this.button1.UseVisualStyleBackColor = false;
@@ -631,9 +668,10 @@
             this.cmbLocations.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbLocations.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::DegreeClock.Properties.Settings.Default, "LocationName", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cmbLocations.DisplayMember = "Name";
-            this.cmbLocations.Location = new System.Drawing.Point(55, 61);
+            this.cmbLocations.Location = new System.Drawing.Point(41, 50);
+            this.cmbLocations.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbLocations.Name = "cmbLocations";
-            this.cmbLocations.Size = new System.Drawing.Size(410, 24);
+            this.cmbLocations.Size = new System.Drawing.Size(308, 21);
             this.cmbLocations.TabIndex = 0;
             this.cmbLocations.Text = global::DegreeClock.Properties.Settings.Default.LocationName;
             // 
@@ -646,19 +684,22 @@
             "Choose a theme...",
             "Default - Light Windowed",
             "Dark Windowless",
+            "Transparent Dark Windowless",
             "Light Windowless"});
-            this.cmbThemes.Location = new System.Drawing.Point(498, 61);
+            this.cmbThemes.Location = new System.Drawing.Point(374, 50);
+            this.cmbThemes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbThemes.Name = "cmbThemes";
-            this.cmbThemes.Size = new System.Drawing.Size(291, 24);
+            this.cmbThemes.Size = new System.Drawing.Size(219, 21);
             this.cmbThemes.TabIndex = 41;
             this.cmbThemes.Tag = "Choose a theme...";
             // 
             // button17
             // 
             this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button17.Location = new System.Drawing.Point(796, 61);
+            this.button17.Location = new System.Drawing.Point(597, 50);
+            this.button17.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(59, 23);
+            this.button17.Size = new System.Drawing.Size(44, 19);
             this.button17.TabIndex = 42;
             this.button17.Text = "Load";
             this.button17.UseVisualStyleBackColor = true;
@@ -667,18 +708,19 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(495, 40);
+            this.label5.Location = new System.Drawing.Point(371, 32);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(95, 17);
+            this.label5.Size = new System.Drawing.Size(72, 13);
             this.label5.TabIndex = 43;
             this.label5.Text = "Load a theme";
             // 
             // frmSettings
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(909, 682);
+            this.ClientSize = new System.Drawing.Size(682, 554);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button17);
             this.Controls.Add(this.cmbThemes);
@@ -722,6 +764,7 @@
             this.Controls.Add(this.cmbLocations);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "frmSettings";
             this.Text = "Settings";
