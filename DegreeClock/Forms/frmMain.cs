@@ -76,13 +76,7 @@ namespace DegreeClock
         {
             UnsubscribeEvents(e.Control);
             base.OnControlRemoved(e);
-        }
-
-        protected override void OnMouseLeave(EventArgs e)
-        {
-            CheckMouseLeave();
-            base.OnMouseLeave(e);
-        }
+        }        
 
         protected override void OnPaintBackground(PaintEventArgs e)
         {
@@ -135,7 +129,6 @@ namespace DegreeClock
                 Program.LocationsList.FirstOrDefault(l => l.Name == name));
             this._currDegTime = new DegreeTime(this._currRegTime.TimeOfDay);
 
-            this.pbClose.Visible = Properties.Settings.Default.HideWindowBorder;
             this.FormBorderStyle = Properties.Settings.Default.HideWindowBorder ?
                     FormBorderStyle.None : FormBorderStyle.Sizable;
             this.ShowInTaskbar = !Properties.Settings.Default.HideWindowBorder;
@@ -147,8 +140,8 @@ namespace DegreeClock
                     Thread.Sleep(5000);
                     this.Invoke(new Action(() =>
                     {
-                        this.pbClose.Visible = false;
                         this.pictureBox1.Visible = false;
+                        this.notifyIcon1.Visible = true;
                     }));
                 });
             }
@@ -165,6 +158,16 @@ namespace DegreeClock
             }
             this.SetRectangleSizes();
             this._needsRefresh = true;
+        }       
+
+        private void preferencesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.chooseLocationToolStripMenuItem_Click(sender, e);
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private void timer_Tick(object sender, EventArgs e)
@@ -204,15 +207,11 @@ namespace DegreeClock
                 this.pnlClockDisplay.Invalidate();
             }
         }
-        private void frmMain_MouseEnter(object sender, EventArgs e)
+        private void notifyIcon1_Click(object sender, EventArgs e)
         {
-            this.pictureBox1.Visible = true;
-            this.pbClose.Visible = Properties.Settings.Default.HideWindowBorder;
+            contextMenuStrip1.Show(Cursor.Position.X, Cursor.Position.Y);
         }
-        private void pbClose_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+
         private void control_ControlAdded(object sender, ControlEventArgs e)
         {
             SubscribeEvents(e.Control);
@@ -221,12 +220,7 @@ namespace DegreeClock
         private void control_ControlRemoved(object sender, ControlEventArgs e)
         {
             UnsubscribeEvents(e.Control);
-        }
-
-        private void control_MouseLeave(object sender, EventArgs e)
-        {
-            CheckMouseLeave();
-        }
+        }    
         #endregion
 
         #region Internal Functions
@@ -250,8 +244,9 @@ namespace DegreeClock
             this._clockNumbersFont = Properties.Settings.Default.ClockNumbersFont;
             this._clockHoursFont = Properties.Settings.Default.ClockHoursFont;
             this.label1.Visible = Properties.Settings.Default.ShowDegTime;
-            this.label2.Visible = Properties.Settings.Default.ShowRegTime;
-            this.pbClose.Visible = Properties.Settings.Default.HideWindowBorder;
+            this.label2.Visible = Properties.Settings.Default.ShowRegTime;            
+            this.pictureBox1.Visible = !Properties.Settings.Default.HideWindowBorder;
+            this.notifyIcon1.Visible = Properties.Settings.Default.HideWindowBorder;
             this.FormBorderStyle = Properties.Settings.Default.HideWindowBorder ?
                     FormBorderStyle.None : FormBorderStyle.Sizable;
             this.ShowInTaskbar = !Properties.Settings.Default.HideWindowBorder;
@@ -303,7 +298,7 @@ namespace DegreeClock
             this._centerPoint = new PointF(r.Width / 2, r.Height / 2);
             this._lineLength = (w / 2) + 20;
         }
-
+        
         private void DrawClockFace(Graphics g, int curDeg)
         {
             float width = this.pnlClockDisplay.DisplayRectangle.Width * 0.95f;
@@ -372,7 +367,7 @@ namespace DegreeClock
                         new PointF(point.X - textSize.Width / 2, point.Y - (textSize.Height / 2)));
                 }
             }
-        }
+        }      
 
         private void DrawClockBackground(Graphics g)
         {
@@ -482,7 +477,6 @@ namespace DegreeClock
         }
         private void SubscribeEvents(Control control)
         {
-            control.MouseLeave += new EventHandler(control_MouseLeave);
             control.ControlAdded += new ControlEventHandler(control_ControlAdded);
             control.ControlRemoved += new ControlEventHandler(control_ControlRemoved);
 
@@ -494,32 +488,12 @@ namespace DegreeClock
 
         private void UnsubscribeEvents(Control control)
         {
-            control.MouseLeave -= new EventHandler(control_MouseLeave);
             control.ControlAdded -= new ControlEventHandler(control_ControlAdded);
             control.ControlRemoved -= new ControlEventHandler(control_ControlRemoved);
 
             foreach (Control innerControl in control.Controls)
             {
                 UnsubscribeEvents(innerControl);
-            }
-        }
-
-        private void CheckMouseLeave()
-        {
-            Point pt = PointToClient(Cursor.Position);
-
-            if (ClientRectangle.Contains(pt) == false)
-            {
-                OnMouseLeftFrom();
-            }
-        }
-
-        private void OnMouseLeftFrom()
-        {
-            this.pbClose.Visible = false;
-            if (Properties.Settings.Default.HideWindowBorder)
-            {
-                this.pictureBox1.Visible = false;
             }
         }
         #endregion
