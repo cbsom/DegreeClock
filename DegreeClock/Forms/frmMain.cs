@@ -253,7 +253,7 @@ namespace DegreeClock
             {
                 var l = Properties.Settings.Default.ShowDegTime ? this.label1 : this.label2;
                 l.Width = this.Width;
-                l.Font = new Font(lblFont.FontFamily, 55, FontStyle.Bold, GraphicsUnit.Point);
+                l.Font = new Font(lblFont.FontFamily, 22, FontStyle.Bold, GraphicsUnit.Point);
                 l.Left = 0;
                 l.TextAlign = ContentAlignment.BottomCenter;
                 l.Refresh();
