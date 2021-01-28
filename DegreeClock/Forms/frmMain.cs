@@ -26,7 +26,7 @@ namespace DegreeClock
         private Font _degreeNumbersFont,
             _clockNumbersFont;
         private Font _clockHoursFont;
-        private StringFormat _stringFormat = new StringFormat(StringFormatFlags.FitBlackBox)
+        private readonly StringFormat _stringFormat = new StringFormat(StringFormatFlags.FitBlackBox)
         {
             Alignment = StringAlignment.Center
         };
@@ -76,7 +76,7 @@ namespace DegreeClock
         {
             UnsubscribeEvents(e.Control);
             base.OnControlRemoved(e);
-        }        
+        }
 
         protected override void OnPaintBackground(PaintEventArgs e)
         {
@@ -158,7 +158,7 @@ namespace DegreeClock
             }
             this.SetRectangleSizes();
             this._needsRefresh = true;
-        }       
+        }
 
         private void preferencesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -201,12 +201,12 @@ namespace DegreeClock
             {
                 Owner = this
             };
-            if (f.ShowDialog() == DialogResult.OK)
+            if (f.ShowDialog() != DialogResult.None)
             {
-                this.GetFromSettings();
-                this.pnlClockDisplay.Invalidate();
+                this.Reload();
             }
         }
+
         private void notifyIcon1_Click(object sender, EventArgs e)
         {
             contextMenuStrip1.Show(Cursor.Position.X, Cursor.Position.Y);
@@ -220,7 +220,7 @@ namespace DegreeClock
         private void control_ControlRemoved(object sender, ControlEventArgs e)
         {
             UnsubscribeEvents(e.Control);
-        }    
+        }
         #endregion
 
         #region Internal Functions
@@ -243,8 +243,31 @@ namespace DegreeClock
             this._degreeNumbersFont = Properties.Settings.Default.DegreeNumbersFont;
             this._clockNumbersFont = Properties.Settings.Default.ClockNumbersFont;
             this._clockHoursFont = Properties.Settings.Default.ClockHoursFont;
+            Font lblFont = Properties.Settings.Default.TimeTextFont;
+            this.label1.Font = lblFont;
+            this.label2.Font = lblFont;
             this.label1.Visible = Properties.Settings.Default.ShowDegTime;
-            this.label2.Visible = Properties.Settings.Default.ShowRegTime;            
+            this.label2.Visible = Properties.Settings.Default.ShowRegTime;
+
+            if (Properties.Settings.Default.ShowRegTime ^ Properties.Settings.Default.ShowDegTime)
+            {
+                var l = Properties.Settings.Default.ShowDegTime ? this.label1 : this.label2;
+                l.Width = this.Width;
+                l.Font = new Font(lblFont.FontFamily, 55, FontStyle.Bold, GraphicsUnit.Point);
+                l.Left = 0;
+                l.TextAlign = ContentAlignment.BottomCenter;
+                l.Refresh();
+            }
+            else
+            {
+                this.label1.Width = (this.Width / 2) - 10;
+                this.label1.Left = 0;
+                this.label1.TextAlign = ContentAlignment.MiddleLeft;
+                this.label2.Width = this.label1.Width;
+                this.label2.Left = this.label1.Width;
+                this.label2.TextAlign = ContentAlignment.MiddleRight;
+                this.label2.Font = lblFont;
+            }
             this.pictureBox1.Visible = !Properties.Settings.Default.HideWindowBorder;
             this.notifyIcon1.Visible = Properties.Settings.Default.HideWindowBorder;
             this.FormBorderStyle = Properties.Settings.Default.HideWindowBorder ?
@@ -255,6 +278,14 @@ namespace DegreeClock
                 this.AllowTransparency = true;
                 this.TransparencyKey = Properties.Settings.Default.FormBackgroundColor;
             }
+        }
+        /// <summary>
+        /// Refreshes GUI from app settings
+        /// </summary>
+        internal void Reload()
+        {
+            this.GetFromSettings();
+            this.pnlClockDisplay.Invalidate();
         }
         #endregion
 
@@ -285,7 +316,7 @@ namespace DegreeClock
         }
         #endregion
 
-        #region Private Instance Functions
+        #region Private Instance Functions      
         private void SetRectangleSizes()
         {
             var r = this.pnlClockDisplay.DisplayRectangle;
@@ -298,7 +329,7 @@ namespace DegreeClock
             this._centerPoint = new PointF(r.Width / 2, r.Height / 2);
             this._lineLength = (w / 2) + 20;
         }
-        
+
         private void DrawClockFace(Graphics g, int curDeg)
         {
             float width = this.pnlClockDisplay.DisplayRectangle.Width * 0.95f;
@@ -367,7 +398,7 @@ namespace DegreeClock
                         new PointF(point.X - textSize.Width / 2, point.Y - (textSize.Height / 2)));
                 }
             }
-        }      
+        }
 
         private void DrawClockBackground(Graphics g)
         {

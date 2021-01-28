@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Theme.cs" />
     <Compile Include="Forms\frmSettings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,39 +81,11 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\TransparentForDarkWindowlessTheme.Designer.cs">
-      <DependentUpon>TransparentForDarkWindowlessTheme.settings</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-    <Compile Include="Properties\DarkWindowlessTheme.cs" />
-    <Compile Include="Properties\DarkWindowlessTheme.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>DarkWindowlessTheme.settings</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\LightWindowless.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>LightWindowless.settings</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="Properties\TransparentForDarkWindowlessTheme.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>TransparentForDarkWindowlessTheme.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="Properties\DarkWindowlessTheme.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>DarkWindowlessTheme.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="Properties\LightWindowless.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>LightWindowless.Designer.cs</LastGenOutput>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
