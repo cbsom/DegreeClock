@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace DegreeClock
@@ -54,14 +55,16 @@ namespace DegreeClock
 
         private void ChangeBackColor(object sender, EventArgs e)
         {
-            this.colorDialog1.Color = ((Button)sender).BackColor;
+            var btn = ((Button)sender);
+            this.colorDialog1.Color = btn.BackColor;
             if (this.colorDialog1.ShowDialog() == DialogResult.OK)
             {
-                ((Button)sender).BackColor = this.colorDialog1.Color;
+                btn.BackColor = this.colorDialog1.Color;
+                SetForeColorByBackColor(btn);
                 this.SettingChanged(sender, e);
-            }
+            }            
         }
-
+        
         private void ChangeForeColor(object sender, EventArgs e)
         {
             this.colorDialog1.Color = ((Button)sender).ForeColor;
@@ -171,6 +174,9 @@ namespace DegreeClock
             {
                 this.cmbTitleBarFormat.SelectedIndex = 7;
             }
+
+            SetForeColorByBackColor(this.btnBackgroundColor);
+            SetForeColorByBackColor(this.btnDayBackgroundColor);
         }
 
 
@@ -304,7 +310,13 @@ namespace DegreeClock
             this.cmbDegTimeLabelFormat.SelectedIndexChanged += SettingChanged;
             this.cmbRegTimeLabelFormat.SelectedIndexChanged += SettingChanged;
             this.cmbTitleBarFormat.SelectedIndexChanged += SettingChanged;
-        }      
+        }
+
+        private static void SetForeColorByBackColor(Button btn)
+        {
+            btn.ForeColor = btn.BackColor.GetBrightness() < 0.5 ? Color.White : Color.Black;
+        }
+
     }
 }
 

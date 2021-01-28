@@ -66,11 +66,11 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnBackgroundColor = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnDayBackgroundColor = new System.Windows.Forms.Button();
             this.cmbLocations = new System.Windows.Forms.ComboBox();
             this.checkBox13 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
@@ -622,20 +622,20 @@
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.ChangeForeColor);
             // 
-            // button5
+            // btnBackgroundColor
             // 
-            this.button5.BackColor = global::DegreeClock.Properties.Settings.Default.FormBackgroundColor;
-            this.button5.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DegreeClock.Properties.Settings.Default, "FormBackgroundColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(43, 79);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(198, 32);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "Background Color";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.ChangeBackColor);
+            this.btnBackgroundColor.BackColor = global::DegreeClock.Properties.Settings.Default.FormBackgroundColor;
+            this.btnBackgroundColor.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DegreeClock.Properties.Settings.Default, "FormBackgroundColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.btnBackgroundColor.FlatAppearance.BorderSize = 0;
+            this.btnBackgroundColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBackgroundColor.Location = new System.Drawing.Point(43, 79);
+            this.btnBackgroundColor.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBackgroundColor.Name = "btnBackgroundColor";
+            this.btnBackgroundColor.Size = new System.Drawing.Size(198, 32);
+            this.btnBackgroundColor.TabIndex = 8;
+            this.btnBackgroundColor.Text = "Background Color";
+            this.btnBackgroundColor.UseVisualStyleBackColor = false;
+            this.btnBackgroundColor.Click += new System.EventHandler(this.ChangeBackColor);
             // 
             // button4
             // 
@@ -684,24 +684,24 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(198, 32);
             this.button2.TabIndex = 5;
-            this.button2.Text = "Night Color";
+            this.button2.Text = "Night Background Color";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.ChangeBackColor);
             // 
-            // button1
+            // btnDayBackgroundColor
             // 
-            this.button1.BackColor = global::DegreeClock.Properties.Settings.Default.DayColor;
-            this.button1.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DegreeClock.Properties.Settings.Default, "DayColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(243, 79);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(198, 32);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Day Color";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.ChangeBackColor);
+            this.btnDayBackgroundColor.BackColor = global::DegreeClock.Properties.Settings.Default.DayColor;
+            this.btnDayBackgroundColor.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::DegreeClock.Properties.Settings.Default, "DayColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.btnDayBackgroundColor.FlatAppearance.BorderSize = 0;
+            this.btnDayBackgroundColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDayBackgroundColor.Location = new System.Drawing.Point(243, 79);
+            this.btnDayBackgroundColor.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDayBackgroundColor.Name = "btnDayBackgroundColor";
+            this.btnDayBackgroundColor.Size = new System.Drawing.Size(198, 32);
+            this.btnDayBackgroundColor.TabIndex = 4;
+            this.btnDayBackgroundColor.Text = "Day Background Color";
+            this.btnDayBackgroundColor.UseVisualStyleBackColor = false;
+            this.btnDayBackgroundColor.Click += new System.EventHandler(this.ChangeBackColor);
             // 
             // cmbLocations
             // 
@@ -769,11 +769,11 @@
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnBackgroundColor);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnDayBackgroundColor);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.btnCancel);
@@ -798,11 +798,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FontDialog fontDialog1;
         private System.Windows.Forms.ColorDialog colorDialog1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnDayBackgroundColor;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnBackgroundColor;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
